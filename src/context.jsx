@@ -13,7 +13,7 @@ export class Provider extends Component {
 	}
 
 	componentDidMount () {
-		fetch(`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10&country=de&f_has_lyrics=1&apikey=${process.env.React_APP_MM_KEY}`)
+		fetch(`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10&country=de&f_has_lyrics=1&apikey=${process.env.REACT_APP_MM_KEY}`)
 		.then(response => response.json())
 		.then(data => console.log(data))
 		.catch(error => console.log(error));
