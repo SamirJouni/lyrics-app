@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 const Context = React.createContext();
 
-class Provider extends Component {
+export class Provider extends Component {
 
 	state = {
 		track_list: [
