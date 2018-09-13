@@ -1,26 +1,27 @@
-import React, { Component } from 'react';
-import { Consumer } from '../../context';
+import React, { Component } from "react";
+import { Consumer } from "../../context";
 import Spinner from "../layout/Spinner";
 
 class Tracks extends Component {
-
-
-
 	render() {
 		return (
 			<Consumer>
-				{ value => {
-					const { track_list } = value;
+				{value => {
+					const { track_list, heading } = value;
 
 					if (track_list === undefined || track_list.length === 0) {
-						return ( <Spinner /> );
+						return <Spinner />;
 					}
 					return (
-						<h1>Tracks Loaded</h1>
-					)
+						<React.Fragment>
+							<h3 className="text-center mb-4">{heading}</h3>
+							<div className="row">
+							</div>
+						</React.Fragment>
+					);
 				}}
 			</Consumer>
-		 );
+		);
 	}
 }
 
