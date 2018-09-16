@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Spinner from "../layout/Spinner";
 
 class Lyrics extends Component {
 	state = {
@@ -23,11 +24,21 @@ class Lyrics extends Component {
 				);
 			})
 			.then(response => response.json())
-			.then(data => this.setState({track: data.message.body.track}))
+			.then(data => this.setState({ track: data.message.body.track }))
 			.catch(error => console.log(error));
 	}
 
 	render() {
+		const { track, lyrics } = this.state;
+
+		if (
+			track === undefined ||
+			lyrics === undefined ||
+			Object.keys(track).length === 0 ||
+			Object.keys(lyrics).length === 0
+		) {
+			return <Spinner />;
+		}
 		return <h1>Lyrics</h1>;
 	}
 }
