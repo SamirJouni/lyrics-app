@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Spinner from "../layout/Spinner";
+import { Link } from "react-router-dom";
 
 class Lyrics extends Component {
 	state = {
@@ -39,7 +40,22 @@ class Lyrics extends Component {
 		) {
 			return <Spinner />;
 		}
-		return <h1>Lyrics</h1>;
+		return (
+			<React.Fragment>
+				<Link to="/" className="btn btn-dark btn-sm mb-4">
+					<i className="fas fa-chevron-left mr-1" /> Go Back
+				</Link>
+				<div className="card">
+					<h5 className="card-header">
+						{track.track_name} By{" "}
+						<span className="text-secondary">{track.artist_name}</span>
+					</h5>
+					<div className="card-body">
+						<p className="card-text">{lyrics.lyrics_body}</p>
+					</div>
+				</div>
+			</React.Fragment>
+		);
 	}
 }
 
