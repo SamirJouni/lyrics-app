@@ -54,6 +54,12 @@ class Lyrics extends Component {
 						<p className="card-text">{lyrics.lyrics_body}</p>
 					</div>
 				</div>
+
+				<ul className="list-group mt-3">
+					<li className="list-group-item">
+						<strong>Album ID</strong>: {track.album_id}
+					</li>
+				</ul>
 			</React.Fragment>
 		);
 	}
