@@ -47,7 +47,7 @@ class Lyrics extends Component {
 				</Link>
 				<div className="card">
 					<h5 className="card-header">
-						{track.track_name} By{" "}
+						{track.track_name} By
 						<span className="text-secondary">{track.artist_name}</span>
 					</h5>
 					<div className="card-body">
@@ -57,11 +57,17 @@ class Lyrics extends Component {
 
 				<ul className="list-group mt-3">
 					<li className="list-group-item">
-						<strong>Genre</strong>:{" "}
-						{
+						<strong>Genre</strong>:
+						<span className="ml-2">{
 							track.primary_genres.music_genre_list[0].music_genre
 								.music_genre_name
-						}
+						}</span>
+					</li>
+					<li className="list-group-item">
+						<strong>Explicit</strong>:
+						<span className="ml-2">{
+							track.explicit === 0 ? 'No' : 'Yes'
+						}</span>
 					</li>
 				</ul>
 			</React.Fragment>
