@@ -57,6 +57,12 @@ class Lyrics extends Component {
 				</div>
 
 				<ul className="list-group mt-3">
+				<li className="list-group-item">
+						<strong>Album</strong>:
+						<span className="ml-2">{
+							track.album_name
+						}</span>
+					</li>
 					<li className="list-group-item">
 						<strong>Genre</strong>:
 						<span className="ml-2">{
