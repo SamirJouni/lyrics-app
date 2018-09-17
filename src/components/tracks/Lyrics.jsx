@@ -69,6 +69,12 @@ class Lyrics extends Component {
 							track.explicit === 0 ? 'No' : 'Yes'
 						}</span>
 					</li>
+					<li className="list-group-item">
+						<strong>Release</strong>:
+						<span className="ml-2">{
+							track.first_release_date
+						}</span>
+					</li>
 				</ul>
 			</React.Fragment>
 		);
