@@ -57,7 +57,11 @@ class Lyrics extends Component {
 
 				<ul className="list-group mt-3">
 					<li className="list-group-item">
-						<strong>Album ID</strong>: {track.album_id}
+						<strong>Genre</strong>:{" "}
+						{
+							track.primary_genres.music_genre_list[0].music_genre
+								.music_genre_name
+						}
 					</li>
 				</ul>
 			</React.Fragment>
