@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+import {Consumer} from '../../context';
 
 class Search extends Component {
 
+	state = {
+		trackTitle: ''
+	 }
+
 	render() {
-		return (  );
+		return (
+			<div>
+
+			</div>
+		 );
 	}
 }
 
