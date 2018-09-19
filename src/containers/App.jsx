@@ -10,7 +10,7 @@ class App extends Component {
 	render() {
 		return (
 			<Provider>
-				<Router>
+				<Router basename={process.env.PUBLIC_URL + '/'}>
 					<React.Fragment>
 						<Navbar />
 						<div className="container">

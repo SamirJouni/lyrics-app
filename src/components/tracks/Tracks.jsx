@@ -8,9 +8,12 @@ class Tracks extends Component {
 		return (
 			<Consumer>
 				{value => {
-					const { track_list, heading, loading } = value;
+					const { track_list, heading, loading, no_results } = value;
 
 					if (track_list === undefined || track_list.length === 0 || loading === true ) {
+						if (track_list.length === 0 && no_results === true) {
+							return <div className="h5 text-center"><i className="far fa-file mr-2"></i>No Results</div>
+						}
 						return <Spinner />;
 					}
 					return (
