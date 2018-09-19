@@ -10,7 +10,7 @@ class Search extends Component {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 
-	findTrack = e => {
+	findTrack = (dispatch, e) => {
 		e.preventDefault();
 		fetch(
 			`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${
@@ -20,13 +20,19 @@ class Search extends Component {
 			}`
 		)
 			.then(response => response.json())
-			.then(data => console.log(data))
+			.then(data =>
+				dispatch({
+					type: "SEARCH_TRACKS",
+					payload: data.message.body.track_list
+				})
+			)
 			.catch(error => console.log(error));
 	};
 	render() {
 		return (
 			<Consumer>
 				{value => {
+					const { dispatch } = value;
 					return (
 						<div className="card card-body mb-4 p-4">
 							<h1 className="display-4 text-center">
@@ -35,7 +41,7 @@ class Search extends Component {
 							<p className="lead text-center">
 								Search For Your Song And View It's Lyrics
 							</p>
-							<form onSubmit={this.findTrack}>
+							<form onSubmit={this.findTrack.bind(this, dispatch)}>
 								<div className="form-group">
 									<input
 										type="text"
