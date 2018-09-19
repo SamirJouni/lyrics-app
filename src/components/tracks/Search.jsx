@@ -20,7 +20,7 @@ class Search extends Component {
 			}`
 		)
 			.then(response => response.json())
-			.then(data => )
+			.then(data => console.log(data))
 			.catch(error => console.log(error));
 	};
 	render() {
