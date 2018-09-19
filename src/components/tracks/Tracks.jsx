@@ -8,9 +8,9 @@ class Tracks extends Component {
 		return (
 			<Consumer>
 				{value => {
-					const { track_list, heading } = value;
+					const { track_list, heading, loading } = value;
 
-					if (track_list === undefined || track_list.length === 0) {
+					if (track_list === undefined || track_list.length === 0 || loading === true ) {
 						return <Spinner />;
 					}
 					return (
