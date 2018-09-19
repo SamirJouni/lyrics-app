@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
+import Spinner from "../layout/Spinner";
 
 class Search extends Component {
 	state = {
@@ -58,7 +59,7 @@ class Search extends Component {
 								className="btn btn-primary btn-lg btn-block mb-5"
 								type="submit"
 							>
-								<i class="fas fa-search mr-2" />
+								<i className="fas fa-search mr-2" />
 								Search
 							</button>
 						</div>
