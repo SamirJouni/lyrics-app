@@ -10,7 +10,7 @@ class Search extends Component {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 
-	findTrack = (dispatch, toggle_loading , e) => {
+	findTrack = (dispatch, toggle_loading, toggle_no_results , e) => {
 		e.preventDefault();
 		toggle_loading();
 		this.setState({ trackTitle: "" });
@@ -28,6 +28,9 @@ class Search extends Component {
 					payload: data.message.body.track_list
 				});
 				toggle_loading();
+				if (!data.message.body.track_list.length) {
+					toggle_no_results();
+				}
 			})
 			.catch(error => console.log(error));
 	};
@@ -35,7 +38,7 @@ class Search extends Component {
 		return (
 			<Consumer>
 				{value => {
-					const { dispatch, toggle_loading } = value;
+					const { dispatch, toggle_loading, toggle_no_results } = value;
 					return (
 						<div className="card card-body mb-4 p-4">
 							<h1 className="display-4 text-center">
@@ -44,7 +47,7 @@ class Search extends Component {
 							<p className="lead text-center">
 								Search For Your Song And View It's Lyrics
 							</p>
-							<form onSubmit={this.findTrack.bind(this, dispatch, toggle_loading)}>
+							<form onSubmit={this.findTrack.bind(this, dispatch, toggle_loading, toggle_no_results)}>
 								<div className="form-group">
 									<input
 										type="text"
@@ -55,14 +58,14 @@ class Search extends Component {
 										onChange={this.onChange}
 									/>
 								</div>
-							</form>
-							<button
+								<button
 								className="btn btn-primary btn-lg btn-block mb-5"
 								type="submit"
 							>
 								<i className="fas fa-search mr-2" />
 								Search
 							</button>
+							</form>
 						</div>
 					);
 				}}
