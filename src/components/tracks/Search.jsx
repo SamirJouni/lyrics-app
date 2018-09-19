@@ -10,9 +10,12 @@ class Search extends Component {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 
-	findTrack = (dispatch, toggle_loading, toggle_no_results , e) => {
+	findTrack = (dispatch, toggle_loading, no_results, toggle_no_results , e) => {
 		e.preventDefault();
 		toggle_loading();
+		if (no_results) {
+			toggle_no_results();
+		}
 		this.setState({ trackTitle: "" });
 		fetch(
 			`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${
@@ -38,7 +41,7 @@ class Search extends Component {
 		return (
 			<Consumer>
 				{value => {
-					const { dispatch, toggle_loading, toggle_no_results } = value;
+					const { dispatch, toggle_loading, no_results, toggle_no_results } = value;
 					return (
 						<div className="card card-body mb-4 p-4">
 							<h1 className="display-4 text-center">
@@ -47,7 +50,7 @@ class Search extends Component {
 							<p className="lead text-center">
 								Search For Your Song And View It's Lyrics
 							</p>
-							<form onSubmit={this.findTrack.bind(this, dispatch, toggle_loading, toggle_no_results)}>
+							<form onSubmit={this.findTrack.bind(this, dispatch, toggle_loading, no_results, toggle_no_results)}>
 								<div className="form-group">
 									<input
 										type="text"
