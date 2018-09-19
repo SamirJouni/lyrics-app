@@ -20,12 +20,13 @@ class Search extends Component {
 			}`
 		)
 			.then(response => response.json())
-			.then(data =>
+			.then(data => {
 				dispatch({
 					type: "SEARCH_TRACKS",
 					payload: data.message.body.track_list
-				})
-			)
+				});
+				this.setState({ trackTitle: "" });
+			})
 			.catch(error => console.log(error));
 	};
 	render() {
