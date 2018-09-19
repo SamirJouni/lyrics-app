@@ -20,7 +20,9 @@ export class Provider extends Component {
 	state = {
 		track_list: [],
 		heading: 'Top 10 Tracks',
-		dispatch: (action) => this.setState(state => reducer(state, action))
+		dispatch: (action) => this.setState(state => reducer(state, action)),
+		loading: false,
+		toggle_loading: () => this.setState({loading: !this.state.loading})
 	}
 
 	componentDidMount () {

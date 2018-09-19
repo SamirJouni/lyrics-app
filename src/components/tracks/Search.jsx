@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
-import Spinner from "../layout/Spinner";
 
 class Search extends Component {
 	state = {
@@ -11,8 +10,10 @@ class Search extends Component {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 
-	findTrack = (dispatch, e) => {
+	findTrack = (dispatch, toggle_loading , e) => {
 		e.preventDefault();
+		toggle_loading();
+		this.setState({ trackTitle: "" });
 		fetch(
 			`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${
 				this.state.trackTitle
@@ -26,7 +27,7 @@ class Search extends Component {
 					type: "SEARCH_TRACKS",
 					payload: data.message.body.track_list
 				});
-				this.setState({ trackTitle: "" });
+				toggle_loading();
 			})
 			.catch(error => console.log(error));
 	};
@@ -34,7 +35,7 @@ class Search extends Component {
 		return (
 			<Consumer>
 				{value => {
-					const { dispatch } = value;
+					const { dispatch, toggle_loading } = value;
 					return (
 						<div className="card card-body mb-4 p-4">
 							<h1 className="display-4 text-center">
@@ -43,7 +44,7 @@ class Search extends Component {
 							<p className="lead text-center">
 								Search For Your Song And View It's Lyrics
 							</p>
-							<form onSubmit={this.findTrack.bind(this, dispatch)}>
+							<form onSubmit={this.findTrack.bind(this, dispatch, toggle_loading)}>
 								<div className="form-group">
 									<input
 										type="text"
