@@ -8,8 +8,21 @@
 	--secondary-color-darkened4: rgba(161, 54, 70, .5);
 }
 
+/* override */
+
+html,
+body,
+#root {
+	color: var(--main-color);
+}
+
+/* Custom Classes */
 .bg-main-color {
 	background-color: var(--main-color);
+}
+
+.text-secondary-color {
+	color: var(--secondary-color);
 }
 
 .btn-secondary-color,
@@ -45,6 +58,16 @@
 	opacity: .5;
 }
 
-.text-secondary-color {
+.btn-secondary-color-light {
 	color: var(--secondary-color);
+	font-weight: 600;
+	font-size: 1.1rem;
+	letter-spacing: .09rem;
+}
+.btn-secondary-color-light:hover,
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-secondary-color-light:not(:disabled):not(.disabled):active,
+.btn-secondary-color-light:not(:disabled):not(.disabled).active,
+.show>.btn-secondary-color-light.dropdown-toggle {
+	color: var(--main-color);
 }

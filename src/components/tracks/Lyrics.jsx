@@ -43,7 +43,7 @@ class Lyrics extends Component {
 		}
 		return (
 			<React.Fragment>
-				<Link to="/" className="btn btn-dark btn-sm mb-4">
+				<Link to="/" className="btn btn-light btn-sm mb-4 btn-secondary-color-light">
 					<i className="fas fa-chevron-left mr-1" /> Back
 				</Link>
 				<div className="card">
