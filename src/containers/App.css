@@ -19,6 +19,9 @@
 	background-color: var(--secondary-color);
 	border-color: var(--secondary-color);
 }
+.btn-secondary-color:focus {
+	outline-color: var(--secondary-color-darkened3);
+}
 .btn-secondary-color:hover {
   box-shadow: inset 0 0 0 20rem var(--secondary-color-darkened);
 }
