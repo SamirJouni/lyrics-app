@@ -6,6 +6,7 @@ const Index = () => {
 	return (
 		<React.Fragment>
 			<Search />
+			<div className="shape3"></div>
 			<Tracks />
 		</React.Fragment>
 	);

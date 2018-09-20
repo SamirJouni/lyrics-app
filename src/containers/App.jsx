@@ -14,6 +14,10 @@ class App extends Component {
 					<React.Fragment>
 						<Navbar />
 						<div className="container">
+						<div className="shape-container">
+							<div className="shape1"></div>
+							<div className="shape2"></div>
+						</div>
 							<Switch>
 								<Route exact path="/" component={Index} />
 								<Route exact path="/lyrics/track/:id" component={Lyrics} />
