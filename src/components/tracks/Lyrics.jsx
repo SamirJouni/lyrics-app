@@ -43,12 +43,15 @@ class Lyrics extends Component {
 		}
 		return (
 			<React.Fragment>
-				<Link to="/" className="btn btn-light btn-sm mb-4 btn-secondary-color-light">
+				<Link
+					to="/"
+					className="btn btn-light btn-sm mb-4 btn-secondary-color-light"
+				>
 					<i className="fas fa-chevron-left mr-1" /> Back
 				</Link>
 				<div className="card">
 					<h5 className="card-header">
-						{track.track_name} By {" "}
+						{track.track_name} By{" "}
 						<span className="text-secondary">{track.artist_name}</span>
 					</h5>
 					<div className="card-body">
@@ -57,24 +60,27 @@ class Lyrics extends Component {
 				</div>
 
 				<ul className="list-group mt-3">
-				<li className="list-group-item">
+					<li className="list-group-item">
 						<strong>Album</strong>:
-						<span className="ml-2">{
-							track.album_name
-						}</span>
+						<span className="ml-2">{track.album_name}</span>
 					</li>
 					<li className="list-group-item">
 						<strong>Genre</strong>:
-						<span className="ml-2">{
-							track.primary_genres.music_genre_list[0].music_genre
-								.music_genre_name
-						}</span>
+						<span className="ml-2">
+							{(() => {
+								try{
+									console.log(track.primary_genres.music_genre_list);
+									return track.primary_genres.music_genre_list[0].music_genre
+									.music_genre_name;
+								} catch (error) {
+									return 'Ø';
+								}
+							})()}
+						</span>
 					</li>
 					<li className="list-group-item">
 						<strong>Explicit</strong>:
-						<span className="ml-2">{
-							track.explicit === 0 ? 'No' : 'Yes'
-						}</span>
+						<span className="ml-2">{track.explicit === 0 ? "No" : "Yes"}</span>
 					</li>
 					<li className="list-group-item">
 						<strong>Release</strong>:
