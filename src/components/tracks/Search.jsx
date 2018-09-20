@@ -12,30 +12,35 @@ class Search extends Component {
 
 	findTrack = (dispatch, toggle_loading, no_results, toggle_no_results , e) => {
 		e.preventDefault();
-		toggle_loading();
-		if (no_results) {
-			toggle_no_results();
-		}
-		this.setState({ trackTitle: "" });
-		fetch(
-			`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${
-				this.state.trackTitle
-			}&page_size=10&page=1&s_track_rating=desc&apikey=${
-				process.env.REACT_APP_MM_KEY
-			}`
-		)
-			.then(response => response.json())
-			.then(data => {
-				dispatch({
-					type: "SEARCH_TRACKS",
-					payload: data.message.body.track_list
-				});
-				toggle_loading();
-				if (!data.message.body.track_list.length) {
-					toggle_no_results();
-				}
-			})
-			.catch(error => console.log(error));
+		if(this.state.trackTitle){
+			toggle_loading();
+			if (no_results) {
+				toggle_no_results();
+			}
+			this.setState({ trackTitle: "" });
+			fetch(
+				`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${
+					this.state.trackTitle
+				}&page_size=10&page=1&s_track_rating=desc&apikey=${
+					process.env.REACT_APP_MM_KEY
+				}`
+			)
+				.then(response => response.json())
+				.then(data => {
+					dispatch({
+						type: "SEARCH_TRACKS",
+						payload: data.message.body.track_list
+					});
+					toggle_loading();
+					if (!data.message.body.track_list.length) {
+						toggle_no_results();
+					}
+				})
+				.catch(error => console.log(error));
+
+				return;
+			}
+			return alert("Please Provide A Song Name.");
 	};
 	render() {
 		return (
