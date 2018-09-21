@@ -58,7 +58,7 @@ class Lyrics extends Component {
 						<p className="card-text">{lyrics.lyrics_body}</p>
 					</div>
 				</div>
-
+				<div className="shape3"></div>
 				<ul className="list-group mt-3">
 					<li className="list-group-item">
 						<strong>Album</strong>:
