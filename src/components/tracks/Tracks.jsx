@@ -28,19 +28,11 @@ class Tracks extends Component {
 					return (
 						<React.Fragment>
 							<h3 className="text-center mb-4">{heading}</h3>
-							<div
-								style={{
-									height: "100%",
-									width: "100%",
-									overflow: "hidden"
-								}}
-							>
-								<div className="scroll-parent">
-									<div className="row scroll-child">
-										{track_list.map(item => (
-											<Track track={item.track} key={item.track.track_id} />
-										))}
-									</div>
+							<div className="scroll-parent">
+								<div className="row scroll-child">
+									{track_list.map(item => (
+										<Track track={item.track} key={item.track.track_id} />
+									))}
 								</div>
 							</div>
 						</React.Fragment>
