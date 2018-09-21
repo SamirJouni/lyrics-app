@@ -75,7 +75,7 @@ body,
 }
 
 
-@media (min-width: 1281px) {
+@media (min-width: 1900px) {
 
 	/* Custom Shapes */
 	.shape-container {
@@ -134,5 +134,14 @@ body,
 		justify-content: center;
 		margin-right: 0;
 		margin-left: 0;
+	}
+}
+@media (min-width: 1366) and (max-width: 1899) {
+
+	.scroll-parent{
+		height: 45vh;
+		width: 110vw;
+		overflow-y: scroll;
+		padding-right: 28vw;
 	}
 }
