@@ -17,6 +17,12 @@ body,
 	overflow-x: hidden;
 }
 
+.form-control:focus {
+	border-color: #d05d6e;
+	-webkit-box-shadow: 0 0 0 0.2rem var(--secondary-color-darkened4);
+	box-shadow: 0 0 0 0.2rem var(--secondary-color-darkened4);
+}
+
 /* Custom Classes */
 .bg-main-color {
 	background-color: var(--main-color);
@@ -75,7 +81,7 @@ body,
 }
 
 
-@media (min-width: 1900px) {
+@media (min-width: 1348px) {
 
 	/* Custom Shapes */
 	.shape-container {
@@ -136,12 +142,18 @@ body,
 		margin-left: 0;
 	}
 }
-@media (min-width: 1366) and (max-width: 1899) {
+@media (min-width: 1200px) and (max-width: 1369px) {
 
 	.scroll-parent{
 		height: 45vh;
 		width: 110vw;
 		overflow-y: scroll;
 		padding-right: 28vw;
+	}
+	.shape-container {
+		left: 79%;
+	}
+	.shape3 {
+		left: -13%;
 	}
 }
