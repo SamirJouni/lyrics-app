@@ -69,7 +69,6 @@ class Lyrics extends Component {
 						<span className="ml-2">
 							{(() => {
 								try{
-									console.log(track.primary_genres.music_genre_list);
 									return track.primary_genres.music_genre_list[0].music_genre
 									.music_genre_name;
 								} catch (error) {
