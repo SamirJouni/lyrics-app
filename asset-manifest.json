@@ -8,8 +8,8 @@
   "runtime~main.js": "/lyrics-app/static/js/runtime~main.61a66aa0.js",
   "runtime~main.js.map": "/lyrics-app/static/js/runtime~main.61a66aa0.js.map",
   "static/media/spinner.gif": "/lyrics-app/static/media/spinner.f3ac8eb8.gif",
-  "static/css/main.6e73c66d.chunk.css.map": "/lyrics-app/static/css/main.6e73c66d.chunk.css.map",
   "static/css/1.738deafa.chunk.css.map": "/lyrics-app/static/css/1.738deafa.chunk.css.map",
+  "static/css/main.6e73c66d.chunk.css.map": "/lyrics-app/static/css/main.6e73c66d.chunk.css.map",
   "index.html": "/lyrics-app/index.html",
   "precache-manifest.634cc067f16277c35e4cbba700033ec7.js": "/lyrics-app/precache-manifest.634cc067f16277c35e4cbba700033ec7.js",
   "service-worker.js": "/lyrics-app/service-worker.js"
