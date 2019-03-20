@@ -17,7 +17,11 @@ class Lyrics extends Component {
 		)
 			.then(response => response.json())
 			.then(data => {
-				this.setState({ lyrics: data.message.body.lyrics });
+				if (data.message.body.lyrics) {
+					this.setState({ lyrics: data.message.body.lyrics });
+				} else {
+					this.setState({ lyrics: {lyrics_body: 'No Lyrics Currently Available.'}});
+				}
 
 				return fetch(
 					`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${
