@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6a36da837cadf04ce405",
+    "revision": "3685ef9cf1842420a56d",
     "url": "/lyrics-app/static/css/main.675c427d.chunk.css"
   },
   {
-    "revision": "6a36da837cadf04ce405",
-    "url": "/lyrics-app/static/js/main.337272dd.chunk.js"
+    "revision": "3685ef9cf1842420a56d",
+    "url": "/lyrics-app/static/js/main.8c6b0400.chunk.js"
   },
   {
     "revision": "7f604f0aff2ec7f670ce",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/lyrics-app/static/media/spinner.f3ac8eb8.gif"
   },
   {
-    "revision": "6738226845d7afe789598cfcb003ce54",
+    "revision": "7aa904b2c826810b3b5b6e31d0103ded",
     "url": "/lyrics-app/index.html"
   }
 ];
