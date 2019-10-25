@@ -1,18 +1,25 @@
 {
   "files": {
-    "main.css": "/lyrics-app/static/css/main.2a7c4e9e.chunk.css",
-    "main.js": "/lyrics-app/static/js/main.1e8a7018.chunk.js",
-    "main.js.map": "/lyrics-app/static/js/main.1e8a7018.chunk.js.map",
-    "runtime~main.js": "/lyrics-app/static/js/runtime~main.f14bbab0.js",
-    "runtime~main.js.map": "/lyrics-app/static/js/runtime~main.f14bbab0.js.map",
-    "static/css/2.0f7a873c.chunk.css": "/lyrics-app/static/css/2.0f7a873c.chunk.css",
-    "static/js/2.27302969.chunk.js": "/lyrics-app/static/js/2.27302969.chunk.js",
-    "static/js/2.27302969.chunk.js.map": "/lyrics-app/static/js/2.27302969.chunk.js.map",
+    "main.css": "/lyrics-app/static/css/main.2a248657.chunk.css",
+    "main.js": "/lyrics-app/static/js/main.7f359566.chunk.js",
+    "main.js.map": "/lyrics-app/static/js/main.7f359566.chunk.js.map",
+    "runtime-main.js": "/lyrics-app/static/js/runtime-main.7074f3c3.js",
+    "runtime-main.js.map": "/lyrics-app/static/js/runtime-main.7074f3c3.js.map",
+    "static/css/2.545c6387.chunk.css": "/lyrics-app/static/css/2.545c6387.chunk.css",
+    "static/js/2.e3b2e962.chunk.js": "/lyrics-app/static/js/2.e3b2e962.chunk.js",
+    "static/js/2.e3b2e962.chunk.js.map": "/lyrics-app/static/js/2.e3b2e962.chunk.js.map",
     "index.html": "/lyrics-app/index.html",
-    "precache-manifest.042eb04b8779d2b7ea819601bbbaea07.js": "/lyrics-app/precache-manifest.042eb04b8779d2b7ea819601bbbaea07.js",
+    "precache-manifest.00f4e6bf6e780cea4e4fdd918574599c.js": "/lyrics-app/precache-manifest.00f4e6bf6e780cea4e4fdd918574599c.js",
     "service-worker.js": "/lyrics-app/service-worker.js",
-    "static/css/2.0f7a873c.chunk.css.map": "/lyrics-app/static/css/2.0f7a873c.chunk.css.map",
-    "static/css/main.2a7c4e9e.chunk.css.map": "/lyrics-app/static/css/main.2a7c4e9e.chunk.css.map",
+    "static/css/2.545c6387.chunk.css.map": "/lyrics-app/static/css/2.545c6387.chunk.css.map",
+    "static/css/main.2a248657.chunk.css.map": "/lyrics-app/static/css/main.2a248657.chunk.css.map",
     "static/media/spinner.gif": "/lyrics-app/static/media/spinner.f3ac8eb8.gif"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7074f3c3.js",
+    "static/css/2.545c6387.chunk.css",
+    "static/js/2.e3b2e962.chunk.js",
+    "static/css/main.2a248657.chunk.css",
+    "static/js/main.7f359566.chunk.js"
+  ]
 }
