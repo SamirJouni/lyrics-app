@@ -11,7 +11,7 @@ class Lyrics extends Component {
 
 	componentDidMount() {
 		fetch(
-			`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${
+			`https://cors-proxy.htmldriven.com/?url=http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${
 				this.props.match.params.id
 			}&apikey=${process.env.REACT_APP_MM_KEY}`
 		)
@@ -24,7 +24,7 @@ class Lyrics extends Component {
 				}
 
 				return fetch(
-					`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${
+					`https://cors-proxy.htmldriven.com/?url=http://api.musixmatch.com/ws/1.1/track.get?track_id=${
 						this.props.match.params.id
 					}&apikey=${process.env.REACT_APP_MM_KEY}`
 				);
