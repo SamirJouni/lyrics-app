@@ -28,7 +28,7 @@ export class Provider extends Component {
 	}
 
 	componentDidMount () {
-		fetch(`https://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10&country=de&f_has_lyrics=1&apikey=${process.env.REACT_APP_MM_KEY}`)
+		fetch(`https://crossorigin.me/http://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=10&country=de&f_has_lyrics=1&apikey=${process.env.REACT_APP_MM_KEY}`)
 		.then(response => response.json())
 		.then(data => this.setState({track_list: data.message.body.track_list}))
 		.catch(error => console.log(error));
